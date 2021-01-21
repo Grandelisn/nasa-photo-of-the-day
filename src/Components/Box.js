@@ -1,13 +1,22 @@
 import React from 'react';
+import styled from 'styled-components';
+
 export default function Box(props){
-    const { Box } = props;
-    console.log(Box);
+    const { box } = props;
+    
     
 
     return (
     <div className="box.js container">
-        <p>Date: {Box.date} <br/> Title: {Box.title} </p>
-        <img src = {Box.url}></img>
+        <BoxStyle>
+        <p>Date: {box.date} <br/> Title: {box.title} </p>
+        </BoxStyle>
+        <img src = {box.url}></img>
     
     </div>)
 }
+const BoxStyle = styled.p`
+    color: red;
+    
+
+`;
